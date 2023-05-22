@@ -1,4 +1,14 @@
-[
+export interface NoteInfo {
+  k: number;
+  name: string;
+  base: string;
+  natural: string | null;
+  flat: string;
+  sharp: string;
+  frequency: number;
+};
+
+export const notes: Array<NoteInfo> = [
   {
     "k": 1,
     "name": "A0",
@@ -790,5 +800,5 @@
     "flat": "dbb/8",
     "sharp": "b#/7",
     "frequency": 4186.01
-  }
-]
+  },
+];

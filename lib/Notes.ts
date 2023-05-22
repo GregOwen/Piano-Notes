@@ -1,5 +1,5 @@
-import notes from "../data/notes.json";
-import { Sample } from "./Audio";
+import { NoteInfo, notes } from "../data/Notes.js";
+import { Sample } from "./Audio/index.js";
 
 export class Note {
 	name: string;

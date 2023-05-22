@@ -1,17 +1,7 @@
 import notes from "../data/notes.json";
 import { Sample } from "./Audio";
 
-interface NoteInfo {
-	k: number;
-	name: string;
-	base: string;
-	natural: string;
-	flat: string;
-	sharp: string;
-	frequency: number;
-}
-
-class Note {
+export class Note {
 	name: string;
 	number: number;
 	info: NoteInfo;
@@ -46,7 +36,7 @@ class Note {
 	}
 }
 
-class Notes {
+export class Notes {
 	notes: Record<string, Note>;
 	list: Note[];
 	samplesLoaded: Record<string, boolean>;
@@ -58,8 +48,7 @@ class Notes {
 
 		notes.forEach(d => {
 			this.notes[d.name] = new Note(d);
-			this[d.name] = this.notes[d.name];	// notes can be referrenced either directly or from `.notes`
-			this.list.push(this.notes[d.name]);	// or from the array `list`
+			this.list.push(this.notes[d.name]);
 		});
 	}
 
@@ -85,5 +74,3 @@ class Notes {
 		})
 	}
 }
-
-export { Notes };

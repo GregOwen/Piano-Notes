@@ -1,6 +1,6 @@
-import notes500 from "../../data/audio/Audio_500.js";
-import notes1000 from "../../data/audio/Audio_1000.js";
-import notes2000 from "../../data/audio/Audio_2000.js";
+import notes500 from "../../data/audio/Audio_500";
+import notes1000 from "../../data/audio/Audio_1000";
+import notes2000 from "../../data/audio/Audio_2000";
 
 /*
 a sample takes the form of:

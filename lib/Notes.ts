@@ -1,5 +1,5 @@
-import { NoteInfo, notes } from "../data/Notes.js";
-import { Sample } from "./Audio/index.js";
+import { NoteInfo, notes } from "../data/Notes";
+import { Sample } from "./Audio/index";
 
 export class Note {
 	name: string;

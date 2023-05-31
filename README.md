@@ -1,19 +1,19 @@
-# Piano-Notes
+# piano-notes-tsx
 
-JavaScript library for playing high-quality, public-domain piano note samples
+TypeScript library for playing high-quality, public-domain piano note samples. Forked from Chris Wilson's [Piano-Notes](https://github.com/wilson428/Piano-Notes) library.
 
 # Usage
 
-Install from the repo (with be on npm soon)
+Install from NPM
 
-	npm install wilson428/Piano-Notes
+	npm install GregOwen/piano-notes-tsx
 
 Then import `Notes` and whichever audio samples you want:
 
-	import { Notes } from '../Piano-Notes'
-	import { Piano_500 } from '../Piano-Notes' 	// 500ms samples, ~1MB
-	import { Piano_1000 } from '../Piano-Notes'	// 1-second samples, ~2MB
-	import { Piano_2000 } from '../Piano-Notes'	// 2-second samples, ~4MB
+	import { Notes } from '../piano-notes-tsx'
+	import { Piano_500 } from '../piano-notes-tsx' 	// 500ms samples, ~1MB
+	import { Piano_1000 } from '../piano-notes-tsx'	// 1-second samples, ~2MB
+	import { Piano_2000 } from '../piano-notes-tsx'	// 2-second samples, ~4MB
 
 	let notes = new Notes();
 
@@ -47,13 +47,3 @@ You can format them all with [`./samples/format.sh`](./samples/format.sh). This 
 To avoid any lag or complicated paths to the modules, each duration of samples are converted to base64 and wrapped into a JSON file to be imported. To do so--again, you don't have to do this unless you're rebuilding--one runs the Node module [`convertNotes.js`](code/convertNotes.js) in the `code` directory.
 
 This produces three files in the [`data/audio`](data/audio) directory: `audio_500.json`, `audio_1000.json` and `audio_2000.json`. At present, they're 1MB, 2MB and 3.9 MB respectively.
-
-## Building the Distributions
-
-This module can either be imported by another Node module or directly included by a Web page from the `/dist` directory, where you'll find [`Notes.js`](./dist/Notes.js) and [`Notes.min.js`](./dist/Notes.min.js).
-
-If you want to rebuild these, install the [`bundle-module`](https://www.npmjs.com/package/bundle-module) library, which I also wrote, which uses Webpack to bundle a module without requiring you to install all the dependencies:
-
-	npm install -g bundle-module
-
-The run `npm run buile` or `npm run minify`. There's not much difference at all between the two files since the bulk of the file size is the samples.

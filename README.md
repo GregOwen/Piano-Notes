@@ -1,4 +1,4 @@
-# piano-notes-tsx
+# piano-notes-ts
 
 TypeScript library for playing high-quality, public-domain piano note samples. Forked from Chris Wilson's [Piano-Notes](https://github.com/wilson428/Piano-Notes) library.
 
@@ -6,14 +6,14 @@ TypeScript library for playing high-quality, public-domain piano note samples. F
 
 Install from NPM
 
-	npm install GregOwen/piano-notes-tsx
+	npm install GregOwen/piano-notes-ts
 
 Then import `Notes` and whichever audio samples you want:
 
-	import { Notes } from '../piano-notes-tsx'
-	import { Piano_500 } from '../piano-notes-tsx' 	// 500ms samples, ~1MB
-	import { Piano_1000 } from '../piano-notes-tsx'	// 1-second samples, ~2MB
-	import { Piano_2000 } from '../piano-notes-tsx'	// 2-second samples, ~4MB
+	import { Notes } from '../piano-notes-ts'
+	import { Piano_500 } from '../piano-notes-ts' 	// 500ms samples, ~1MB
+	import { Piano_1000 } from '../piano-notes-ts'	// 1-second samples, ~2MB
+	import { Piano_2000 } from '../piano-notes-ts'	// 2-second samples, ~4MB
 
 	let notes = new Notes();
 

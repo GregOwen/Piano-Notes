@@ -1,5 +1,5 @@
 {
-  "name": "piano-notes-tsx",
+  "name": "piano-notes-ts",
   "version": "0.0.1",
   "description": "TypeScript version of Chris Wilson's Piano-Notes library for playing high-quality, public domain samples",
   "main": "dist/index.js",
